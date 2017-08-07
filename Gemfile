@@ -27,7 +27,7 @@ group :development do
   # statistics only on MRI 2.4 - avoid problems on older rubies
   gem "redcarpet",      :platforms => [:mri_24]
   gem "simplecov",      :platforms => [:mri_24]
-  gem "coveralls",      :platforms => [:mri_24]
+  gem "coveralls",      :platforms => [:mri_24], require: false
   gem "guard",          :platforms => [:mri_24]
   gem "guard-minitest", :platforms => [:mri_24]
   gem "guard-yard",     :platforms => [:mri_24]

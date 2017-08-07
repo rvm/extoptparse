@@ -26,19 +26,19 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "extoptparse/version"
 
 Gem::Specification.new do |s|
-  s.email   = ["mpapis@gmail.com"]
-  s.authors = ["Michal Papis"    ]
-  s.name    = "extoptparse"
-  s.version = EXT_OPT_PARSE_VERSION.dup
-  s.license = "AGPL-3.0"
-  s.files   = Dir["lib/**/*.rb", "*.md", "LICENSE"]
-  s.required_ruby_version = ">= 1.9.3"
+  s.license  = "AGPL-3.0"
+  s.email    = ["mpapis@gmail.com"]
+  s.authors  = ["Michal Papis"    ]
+  s.version  = EXT_OPT_PARSE_VERSION.dup
+  s.name     = "extoptparse"
+  s.summary  = "Extended Ruby's OptionParser with grouping of options."
+  s.homepage = "https://github.com/rvm/extoptparse"
+  s.files    = Dir["lib/**/*.rb", "*.md", "LICENSE"]
+  s.required_ruby_version     = ">= 1.9.3"
   s.required_rubygems_version = ">= 2.0.0"
   s.add_development_dependency("rake",     "~> 12.0")
   s.add_development_dependency("rubocop",  "~> 0.49") if RUBY_VERSION>="2.0.0"
   s.add_development_dependency("minitest", "~> 5.10")
   s.add_development_dependency("minitest-reporters", "~> 1.1")
   # s.add_development_dependency("smf-gem")
-  s.homepage = "https://github.com/rvm/extoptparse"
-  s.summary = "Extended Ruby's OptionParser with grouping of options."
 end

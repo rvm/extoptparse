@@ -29,6 +29,8 @@ module GroupOptionParser
 
   # @overload remove(name)
   #   allows removing last or group by `name`
+  # @param name STRING name of the group to remove,
+  #                    if no name provided removes last added list
   def remove(name=nil)
     if name
       remove_group(name)
@@ -39,6 +41,9 @@ module GroupOptionParser
 
   # run block in context of a group,
   # if group does not exist it's created
+  # @param name STRING name of the group to change context to, if the group is missing it's created
+  # @yield self all the operations on instance now refer to group
+  # TODO: not thread safe, might need to do it in a thread safe way if we ever need threads to build parser
   def group(name, &_block)
     self.current_top = group_index(name)
     yield self
